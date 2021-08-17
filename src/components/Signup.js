@@ -69,9 +69,9 @@ const Signup = () => {
                         </div>
 
                         <div>
-                            <p className="text-center text-sm text-grey-dark mt-4">By signing up, you agree to the <a className="no-underline border-b hover:border-purple-700 text-purple-700 font-semibold" href="#">
+                            <p className="text-center text-sm text-grey-dark mt-4">By signing up, you agree to the <a className="border-b hover:border-purple-700 text-purple-700 font-semibold" href="#">
                                 Terms of Service
-                            </a> and <a className="no-underline border-b hover:border-purple-700 text-purple-700 font-semibold" href="#">
+                            </a> and <a className="border-b hover:border-purple-700 text-purple-700 font-semibold" href="#">
                                     Privacy Policy
                                 </a>
                             </p>
