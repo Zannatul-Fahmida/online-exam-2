@@ -46,7 +46,7 @@ const FeatureShort = () => {
 				/>
 			</div>
 			<div className="text-center">
-			<CommonBtn destination="/feature" title="See All Features" />
+			<CommonBtn destination="/features" title="See All Features" />
 			</div>
 		</div>
 	);

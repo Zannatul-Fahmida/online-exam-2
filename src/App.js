@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import NoMatch from "./components/NoMatch";
 import Features from "./components/Features";
 import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route path="/features" component={Features} />
 				<Route path="/contact" component={Contact} />
 				<Route path="/login" component={Login} />
+				<Route path="/signup" component={Signup} />
 				<Route path="*" component={NoMatch} />
 			</Switch>
 		</Router>

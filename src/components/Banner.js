@@ -16,7 +16,7 @@ const Banner = () => {
 						praesentium debitis facilis enim asperiores et laboriosam earum id
 						laborum. sapiente vitae dolore doloremque sint eos?
 					</p>
-					<CommonBtn destination="/feature" title="Features" />
+					<CommonBtn destination="/features" title="Features" />
 				</div>
 				<div className="banner-right px-2 md:w-3/5 w-full">
 					<img src={bannerImg} alt="banner" />

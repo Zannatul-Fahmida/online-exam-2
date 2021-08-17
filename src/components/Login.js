@@ -1,45 +1,28 @@
 import React from "react";
-import firebase from "firebase/app";
-import "firebase/auth";
-import { firebaseConfig } from "../firebase.config";
-import { useState } from "react";
+import CommonBtn from "./CommonBtn";
+import { Link } from "react-router-dom";
 
-firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
-	const [user, setUser] = useState({
-		isSignIn: false,
-		name: "",
-		email: "",
-		photo: "",
-	});
-	const provider = new firebase.auth.GoogleAuthProvider();
-
-	const handleSignIn = () => {
-		firebase
-			.auth()
-			.signInWithPopup(provider)
-			.then((res) => {
-				const { displayName, email, photoURL } = res.user;
-				const signInUser = {
-					isSignIn: true,
-					name: displayName,
-					email: email,
-					photo: photoURL,
-				};
-				setUser(signInUser);
-			})
-			.catch((err) => {
-				const errMgs = err.message;
-				const errEmail = err.email;
-			});
-	};
 	return (
-		<div>
-			<h2>Login</h2>
-			<button onClick={handleSignIn}>Sign in</button>
-			<p>{user.name}</p>
-			<img src={user.photo} alt="" />
+		<div className="flex flex-col">
+			<div className="bg-blue-50 w-full lg:w-1/3 md:w-2/3 mx-auto rounded-lg my-20 px-4 py-4 shadow-lg">
+			<h2 className="text-4xl title-font text-center my-5 font-bold text-purple-900">Login</h2>
+				<input type='text' placeholder="Email or Phone Number"
+					className="w-full mb-3 px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:border-indigo-300 focus:bg-white focus:ring-2 focus:ring-indigo-300" />
+				<input type='password' placeholder="Password"
+					className="w-full mb-3 px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:border-indigo-300 focus:bg-white focus:ring-2 focus:ring-indigo-300" />
+				<div className="w-full text-center mt-2">
+					<CommonBtn destination="/login" title="Log in" />
+				</div>
+				<div class="flex justify-center my-4">
+					<a className="text-blue-500 text-sm" href="#">Forgot account?</a>
+				</div>
+				<hr />
+				<div className="text-center my-6">
+					<p>Don't have account? <Link to="/signup" className="text-purple-900 font-bold">Sign up</Link></p>
+				</div>
+			</div>
 		</div>
 	);
 };

@@ -18,7 +18,7 @@ const About = () => {
 						<div class="flex-grow">
 							<h2 class="text-gray-900 text-lg title-font font-medium mb-3">Want to Try Online Exam</h2>
 							<p class="leading-relaxed text-base mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores maxime laborum asperiores beatae ratione vitae.</p>
-							<CommonBtn destination="/login" title="Sign up" />
+							<CommonBtn destination="/signup" title="Sign up" />
 						</div>
 					</div>
 				</div>
