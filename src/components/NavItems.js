@@ -23,7 +23,7 @@ const NavItems = () => {
 			>
 				Contact
 			</Link>
-			<CommonBtn className="" destination="/login" title="Login" />
+			<CommonBtn destination="/login" title="Login" />
 		</>
 	);
 };

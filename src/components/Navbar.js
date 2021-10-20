@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CgMenuGridR } from "react-icons/cg";
 import NavItems from "./NavItems";
+import logoImg from "../images/logo.png";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<div className="bg-blue-50">
-			<nav className="flex justify-between container mx-auto py-4 text-2xl font-bold px-2">
-				<Link to="/">Online Exam</Link>
+			<nav className="flex justify-between items-center container mx-auto py-4 text-2xl font-bold px-2">
+				<Link className="flex items-center" to="/"><img className="h-10" src={logoImg} alt="banner" />Online Exam</Link>
 				<div
 					className="lg:hidden block text-4xl"
 					onClick={() => {
